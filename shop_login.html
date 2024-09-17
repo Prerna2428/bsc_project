@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../static/">
+    <link rel="stylesheet" href="/static/css/shoplogin.css">
+</head>
+<body background="../static/images/bg3.jpg">
+    <div class="container1">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </div>
+    <div class="container">
+        <div class="loginHeader">
+            
+            <h3>Login</h3>
+    </div>
+    <div class="loginBody">
+        <form action="/shop_login_verify" method="post">
+            <div class="loginInputsContainer">
+                <label for="">Email</label>
+                <input type="email" name="email"/>
+            </div>
+            <div class="loginInputsContainer">
+                <label for="">Password</label>
+                <input type="password" name="password"/>
+            </div>
+            <div class="loginbuttoncontainer">
+                <button type="submit">Login now</button>
+            </div>
+            <p class="para">
+                New User?<a href="/shop_signup">SignUp</a></p>
+        </form>
+        
+        </div>
+    </div> 
+</body>
+</html>

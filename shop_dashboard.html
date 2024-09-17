@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../static/">
+</head>
+<body background="../static/images/images med.jpg" width="500px" height="100vh">
+    
+    
+    <style>
+        body{
+            margin: 0;
+            background-image: url(../static/images/istockphoto-1096306446-612x612.jpg);
+            background-size: cover;
+        }
+    
+        .sidebar{
+            position: fixed;
+            left: 0;
+            width: 400px;
+            height: 100%;
+            background: #f85050;
+        }
+        .sidebar .logo{
+            
+            color: rgb(53, 53, 22);
+            user-select: none;
+            padding-left: 30%;
+            
+        }
+        .sidebar .logo .pic{
+           padding-left: 30%;
+           width: 40px;
+           display: flex;
+           align-items: center;
+        }
+        .sidebar .logo a{
+            padding-left: 25%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 120px;
+  padding: 10px;
+  background-image: linear-gradient(125deg,#e92261,#8d9706);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  position:absolute;
+  background-color: #e92261;
+  justify-content: center;
+  margin-left: 70px;   
+
+}
+        
+    
+        .p2{
+            
+            margin-top: 100px;
+        }
+        .sidebar ul a{
+            margin-top: 20px;
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 65px;
+            font-size: 20px;
+            color: aquamarine;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(red, green, blue, alpha);
+            border-bottom: 1px solid rgb(220, 33, 33);
+            text-decoration: none;
+        }
+         ul a:hover{
+            padding-left: 50px;
+         }
+
+     
+       
+     
+    </style>
+    <body>
+        
+    <nav class="sidebar">
+        
+        <label class="logo"><img src="../static/images/user.png" alt="" class="pic">
+        <a href="/shop_profile"><button class="btn btn-success">{{session['shop_name']}}</button></a></label>
+        <div class="p2">
+        <ul>
+          <a href="/">home</a>
+          <a href="/product">Add product</a>
+          <a href="/product_list">View Product</a>
+          
+        </ul>
+      </div>
+    
+    </nav>
+    <div></div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

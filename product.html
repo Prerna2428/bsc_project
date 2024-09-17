@@ -1,14 +1,15 @@
-{% extends "shop_layout.html" %}
+{% extends "shop_layout.html"%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="product.css">
+    <base href="../static/">
+    <link rel="stylesheet" href="../static/css/product.css">
     <title>Document</title>
 </head>
-{}
+{% block content %}
 <body>
    <div class="wrapper">
       <div class="row d-flex justify-content-center">
@@ -30,19 +31,26 @@
        <h2>Product</h2>
          <div class="content">
 
-            <div class="inputfield">
-             <label>Product Id</label>
-             <input type="text" class="input" name="productid">
-            </div> 
-
+            
             <div class="inputfield">
                <label>Product Name</label>
                <input type="text" class="input" name="productname">
             </div>  
 
             <div class="inputfield">
-               <label>Product Type</label>
-               <input type="text" class="input" name="producttype">
+               <label for="">Product Type</label>
+               <select name="producttype" id="" class="ptype">
+                  <option value="cold">Cold</option>
+                  <option value="fever">Fever</option>
+                  <option value="cough">Cough</option>
+                  <option value="orthopaedics">Orthopaedics</option>
+                  <option value="loose motion">Loose motion</option>
+                  <option value="covid">Covid Essentials</option>
+                  <option value="healthy Drinks ">Healthy Drinks and Supplements</option>
+                  <option value="ayurvedic">Ayurveda</option>
+               </select>
+
+               
             </div>  
 
             <div class="inputfield">
@@ -54,7 +62,6 @@
                <label>Expiry Date</label>
                <input type="date" class="input" name="expirydate">
             </div> 
-
             <div class="inputfield">
                <label>Photo</label>
                <input type="file" class="input" name="photo">
@@ -75,6 +82,6 @@
       </form>
 
    </div>
-   
+   {% endblock content %}
 </body>
 </html>

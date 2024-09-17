@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>sign up</title>
+    <base href="../static/">
+    <link rel="stylesheet" href="/static/css/shopsign.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container1">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+          {{message}}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+    <form action="/shop_signup_insert" method="post">
+        <div class="headingsContainer">
+        <h1 style="color: rgba(13, 215, 215, 0.861);">Sign up</h1>
+      </div>
+      <label for=""></label>
+        <input type="text" placeholder="Enter your Name" name="name"/>
+        <label for=""></label>
+        <input type="email" placeholder="Enter your email" name="email"/>
+        <label for=""></label>
+        <input type="address" id="autocomplete" placeholder="address" name="address">
+        <label for=""></label>
+        <input type="zip" id="inputzip" placeholder="pin code" name="pincode">
+        <label for=""></label>
+        <input type="password" id="inputpassword" placeholder="password" name="password">
+        <label for=""></label>
+        <input type="mobile"   name="mobile"  placeholder="Enter your phone number">
+        <input type="submit" value="SUBMIT"/>
+        <p class="para-2">
+          Already have an account? <a href="/shop_login">Login here</a>
+        </p>
+       </form>
+       
+      
+    </div>
+   
+  </body>
+</html>

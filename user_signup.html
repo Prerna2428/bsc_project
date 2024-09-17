@@ -1,0 +1,58 @@
+{% extends "main_layout.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    {% block content %}
+    <link rel="stylesheet" href="../static/css/sign.css" />
+  </head>
+  <body>
+    <div class="container1">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+          {{message}}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+   <div class="container">
+     <div class="left">
+       <form action="/user_signup_insert" method="post">
+         <div class="headingsContainer">
+            <h3>SignUp</h3>
+         </div>
+         <label for=""></label>
+         <input type="text" placeholder="Enter your Name" name="name"/>
+         <label for=""></label>
+         <input type="email" placeholder="Enter your email" name="email" />
+         <label for=""></label>
+         <input type="street address" id="autocomplete" placeholder="street adress" name="address">
+         <label for=""></label>
+         <input type="zip" id="inputzip" placeholder="pin code" name="pincode">
+         <label for=""></label>
+         <input type="city" id="inputcity" placeholder="city" name="city">
+         <label for=""></label>
+         <input type="password" id="password" placeholder="password" name="password">
+         <label for=""></label>
+         <input type="mobile"  id="phone"  placeholder="Enter your phone number" name="mobile">
+         <label for=""></label>
+         <img src="../static/captcha/user_captcha.png" alt="" width="80" height="50">
+         <input type="text"  id="message"  placeholder="Enter Captcha" name="captcha">
+         <label for=""></label>
+         <input type="Submit" value="SUBMIT"/>
+         <p>Already have an account? <a href="/user_login">Login here</a></p>
+        </form>
+        
+      
+      </div>
+      <div class="right"></div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
+ 
+  

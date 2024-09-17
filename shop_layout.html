@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../static/">
+    <link rel="stylesheet" href="../static/css/product.css">
+    <title>Medexpress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+        }
+        .sidebar{
+            position: fixed;
+            left: 0;
+            width: 400px;
+            height: 100%;
+            background: #f85050;
+        }
+        .sidebar h3{
+            font-size: 22px;
+            color: beige;
+            text-align: center;
+            user-select: none;
+        }
+        .sidebar ul a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 65px;
+            font-size: 20px;
+            color: aquamarine;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(red, green, blue, alpha);
+            border-bottom: 1px solid rgb(220, 33, 33);
+            text-decoration: none;
+        }
+         ul li:hover{
+            padding-left: 50px;
+         }
+    </style>
+    <nav class="sidebar">
+        <h3>Dashboard</h3>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/product">Add product</a></li>
+          <li><a href="/product_list">View Product</a></li>
+        </ul>
+    
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
