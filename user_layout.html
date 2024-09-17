@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../static/">
+    
+    <title>Medexpress</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        font-family: 'Lato', sans-serif;
+    }
+   
+    header{
+        padding: 20px;
+        text-align: center;
+        background-color: darkorange;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1.5rem 7%;
+        border-bottom: var(--border);
+        position: fixed;
+        top:0; left: 0; right: 0;
+        z-index: 1000
+        
+    }
+    .header .navbar{
+        display: flex;
+        flex-grow: .25;
+        align-items: center;
+    }
+    .header .navbar a{
+        list-style-type: none;
+        margin:0 1rem;
+        font-size: 1.6rem;
+        color:#ffffff;
+        padding: 20px;
+}
+    
+    .header .navbar a{
+        color:black;
+        text-decoration: none;
+        transition: 1s;
+    }
+    .header .navbar a:hover{
+        color:blanchedalmond;
+        text-decoration: overline;
+    }
+    .mid{
+        padding: 200px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .footer{
+        background-color: rgb(243, 21, 21);
+        text-align: center;
+        padding: 8px;
+    }
+
+    .footer .share{
+        padding:1rem 0;
+    }
+    .footer  .share a{
+        list-style-type: none;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        color:#fff;
+        
+        margin:.3rem;
+        border-radius: 50%;
+    }
+    .footer .links{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding:2rem 0;
+      gap:1rem;
+    }
+    .footer .links a{
+        color:rgb(17, 10, 11);
+        padding:.7rem 2rem;
+        font-size: 2rem;
+    }
+    .footer .links a:hover{
+        color:darkgreen;
+    }
+
+    .footer .credit{
+
+     font-size: 2rem;
+     color:#fff;
+     font-weight: lighter;
+     padding:1.5rem;
+    }
+
+.footer .credit span{
+    color:cyan;
+}
+</style>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+    
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="/user_profile"><button class="btn btn-success">{{session['user_name']}}</button></a>
+        
+    </nav>
+    
+   
+</header>
+
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">products</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+        
+    </div>
+
+    <div class="credit"> @all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+</body>
+</html>
