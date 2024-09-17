@@ -74,19 +74,22 @@ section{
 }
 
 .header{
+    
     background: var(--bg);
     display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
+    align-items: center;
+    justify-content: space-between;
     padding:1.5rem 7%;
     border-bottom: var(--border);
     position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
     
     
 }
 
 .header .logo img{
-    height: 6rem;
+   height: 6rem;
 }
 
 .header .navbar a{
@@ -467,18 +470,6 @@ section{
 .footer .credit span{
     color:var(--main-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* media queries  */
 @media (max-width:991px){

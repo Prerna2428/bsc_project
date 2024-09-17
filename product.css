@@ -7,16 +7,16 @@
 body{
   background:linear-gradient(110deg,rgb(0, 229, 255), rgb(248, 100, 100));
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content:end;
   height: 100vh;
+
 
 }
 
 .wrapper{
-  max-width: 900px;
+  max-width: 800px;
   padding: 28px;
-  margin: 0 28px;
+  margin-right: 0px;
   box-shadow: 1px solid red;
 
 }
@@ -46,6 +46,14 @@ h2{
 }
  
 .inputfield input{
+  height: 40px;
+  width: 90%;
+  padding:  0 10px;
+  border-radius: 5px;
+  border:1px solid rgb(43, 255, 0);
+  outline:none;
+}
+.inputfield select{
   height: 40px;
   width: 90%;
   padding:  0 10px;

@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(../images/AryqYx.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+    
+}
+  
+  
+h1 {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 40px;
+  
+}
+    
+form {
+  position: absolute;
+  width: 350px;
+  margin-left: 150px;
+  margin-top: 90px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+      
+}
+    
+    form label {
+      display: flex;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    
+    form input {
+      width: 100%;
+      height: 45px;
+      padding: 7px;
+      border: none;
+      border: 1px solid gray;
+      border-radius: 6px;
+      outline: none;
+    }
+    input[type="submit"] {
+      width: 280px;
+      height: 60px;
+      margin-top: 20px;
+      border: none;
+      background-color: #49c1a2;
+      color: rgb(16, 16, 240);
+      font-size: 30px;
+    }
+    
+    .para-2 {
+      margin-left: 10px;
+      color: rgb(243, 4, 4);
+      font-size: 20px;
+      margin-top: 20px;
+      
+      
+    }
+    .para-2 a{
+      color:#49c1a2;
+    }
+    
+    
