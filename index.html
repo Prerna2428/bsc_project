@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block content %}
+    <style>
+        body{
+            background-color:rgb(233, 233, 161);
+        }
+        .container a button {
+         background-color: rgb(35, 210, 210);
+         justify-content: center;
+        
+         text-transform: uppercase;
+         border-radius: 40px 15px;
+         font-weight: bold;
+         padding: 12px 20px 8px;
+         outline: none;
+         font-size: 35px;
+         text-decoration: none;
+         letter-spacing: 1px;
+         color:rgb(59, 19, 239);
+
+        
+        }
+        .container{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .btn2{
+            margin-top: 35px;
+
+
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/user_signup" class="btn1"><button>User Signup</button></a>
+    <a href="/user_login" class="btn2"><button>User Login</button></a>
+        
+</div>
+
+   {% endblock %} 
+</body>
+</html>
